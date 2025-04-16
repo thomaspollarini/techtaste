@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/dish.dart';
 import 'package:myapp/model/restaurant.dart';
+import 'package:myapp/ui/_core/bag_provider.dart';
 import 'package:myapp/ui/_core/widgets/appbar.dart';
+import 'package:provider/provider.dart';
 
 class RestaurantScreen extends StatelessWidget {
   final Restaurant restaurant;
@@ -27,7 +29,12 @@ class RestaurantScreen extends StatelessWidget {
                   leading: Image.asset('assets/dishes/default.png', width: 48),
                   title: Text(dish.name),
                   subtitle: Text("R\$${dish.price.toStringAsFixed(2)}"),
-                  trailing: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                  trailing: IconButton(
+                    onPressed: () {
+                      context.read<BagProvider>().addAllDishes([dish]);
+                    },
+                    icon: Icon(Icons.add),
+                  ),
                 );
               }),
             ),
