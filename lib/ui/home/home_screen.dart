@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/data/categories_data.dart';
 import 'package:myapp/data/restaurant_data.dart';
 import 'package:myapp/model/restaurant.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
 import 'package:myapp/ui/_core/widgets/appbar.dart';
 import 'package:myapp/ui/home/widgets/category_widget.dart';
 import 'package:myapp/ui/home/widgets/restaurant_widget.dart';
@@ -24,9 +25,19 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(child: Image.asset('assets/logo.png', width: 147)),
-              Text("Boas-vindas!"),
+              Text(
+                "Boas-vindas!",
+                style: TextStyle(
+                  color: AppColors.highlightText,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
               TextFormField(),
-              Text("Escolha por categoria"),
+              Text(
+                "Escolha por categoria",
+                style: TextStyle(color: AppColors.highlightText, fontSize: 22),
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -42,7 +53,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Image.asset("assets/banners/banner_promo.png"),
-              Text("Bem avaliados"),
+              Text(
+                "Bem avaliados",
+                style: TextStyle(
+                  color: AppColors.highlightText,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               Column(
                 spacing: 16.0,
                 children: List.generate(restaurantData.listRestaurant.length, (
