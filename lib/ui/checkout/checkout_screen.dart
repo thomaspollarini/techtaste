@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/dish.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
 import 'package:myapp/ui/_core/bag_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +14,7 @@ class CheckoutScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Sacola"),
         actions: [
-          TextButton(onPressed: bagProvider.clearBag, child: Text("Limpar")),
+          TextButton(onPressed: bagProvider.clearBag, child: Text("Limpar", style: TextStyle(color: AppColors.mainColor),)),
         ],
       ),
       body: Padding(
