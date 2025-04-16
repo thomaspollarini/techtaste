@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/dish.dart';
 import 'package:myapp/model/restaurant.dart';
+import 'package:myapp/ui/_core/widgets/appbar.dart';
 
 class RestaurantScreen extends StatelessWidget {
   final Restaurant restaurant;
@@ -9,7 +10,7 @@ class RestaurantScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(restaurant.name)),
+      appBar: getAppBar(context: context, title: (restaurant.name)),
       body: Center(
         child: Column(
           spacing: 12,
