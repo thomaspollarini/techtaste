@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/model/dish.dart';
 import 'package:myapp/model/restaurant.dart';
 
 class RestaurantScreen extends StatelessWidget {
@@ -18,7 +19,17 @@ class RestaurantScreen extends StatelessWidget {
               "Mais pedidos",
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
-            Column(),
+            Column(
+              children: List.generate(restaurant.dishes.length, (index) {
+                Dish dish = restaurant.dishes[index];
+                return ListTile(
+                  leading: Image.asset('assets/dishes/default.png', width: 48),
+                  title: Text(dish.name),
+                  subtitle: Text("R\$${dish.price.toStringAsFixed(2)}"),
+                  trailing: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                );
+              }),
+            ),
           ],
         ),
       ),
