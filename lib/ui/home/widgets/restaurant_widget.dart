@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/restaurant.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
 import 'package:myapp/ui/restaurant/restaurant_screen.dart';
 
 class RestaurantWidget extends StatelessWidget {
@@ -28,7 +29,11 @@ class RestaurantWidget extends StatelessWidget {
             children: [
               Text(
                 restaurant.name,
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.highlightText,
+                ),
               ),
               Row(
                 children: List.generate(restaurant.stars.toInt(), (index) {
