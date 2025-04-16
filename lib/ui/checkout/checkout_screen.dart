@@ -47,6 +47,102 @@ class CheckoutScreen extends StatelessWidget {
                   },
                 ),
               ),
+              Text(
+                "Confirmar",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  color: AppColors.highlightText,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Container(
+                height: 190,
+                decoration: BoxDecoration(
+                  color: AppColors.lightBackgroundColor,
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    spacing: 12.0,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            "Pedido:",
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.start,
+                          ),
+                          Spacer(),
+                          Text(
+                            'R\$ ${bagProvider.getTotalPrice().toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.highlightText,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            "Entrega:",
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.start,
+                          ),
+                          Spacer(),
+                          Text(
+                            'R\$ ${(bagProvider.getTotalPrice() * 0.15).toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.highlightText,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            "Total:",
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.start,
+                          ),
+                          Spacer(),
+                          Text(
+                            'R\$ ${(bagProvider.getTotalPrice() * 1.15).toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.highlightText,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 2),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: bagProvider.clearBag,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.shopping_bag, color: Colors.black),
+                              Text("Pedir"),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

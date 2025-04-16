@@ -19,6 +19,14 @@ class BagProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  getTotalPrice() {
+    double totalPrice = 0;
+    for (Dish dish in dishesOnBag) {
+      totalPrice += dish.price;
+    }
+    return totalPrice;
+  }
+
   Map<Dish, int> getMapByAmount() {
     Map<Dish, int> mapResult = {};
 
