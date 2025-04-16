@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/dish.dart';
 import 'package:myapp/ui/_core/app_colors.dart';
+import 'package:myapp/ui/dish/dish_screen.dart';
 
 class DishWidget extends StatelessWidget {
+  final String restaurantName;
   final Dish dish;
-  const DishWidget({super.key, required this.dish});
+  const DishWidget({
+    super.key,
+    required this.dish,
+    required this.restaurantName,
+  });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        /*Navigator.push(
+        Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
-              return DishScreen(dish: dish);
+              return DishScreen(dish: dish, restaurantName: restaurantName);
             },
           ),
         );
-      */
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),

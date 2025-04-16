@@ -35,7 +35,7 @@ class RestaurantScreen extends StatelessWidget {
             Column(
               children: List.generate(restaurant.dishes.length, (index) {
                 Dish dish = restaurant.dishes[index];
-                return DishWidget(dish: dish);
+                return DishWidget(dish: dish, restaurantName: restaurant.name);
               }),
             ),
           ],
