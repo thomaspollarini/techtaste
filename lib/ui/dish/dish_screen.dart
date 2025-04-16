@@ -99,7 +99,7 @@ class _DishScreenState extends State<DishScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     bagProvider.addAllDishes(_getDishes());
-                  }, //TODO: create cart logic
+                  },
                   child: Text("Adicionar"),
                 ),
               ),
