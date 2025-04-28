@@ -1,16 +1,25 @@
-# myapp
+# TechTaste - Aplicativo de Prática em Flutter
 
-A new Flutter project.
+O **TechTaste** é um aplicativo de delivery de comida desenvolvido como projeto de prática para estudos em **Flutter**.  
+Inspirado em aplicativos como o iFood, seu objetivo principal é exercitar o desenvolvimento mobile, focando em conceitos de interface, navegação e estruturação de aplicativos Flutter.
 
-## Getting Started
+## Sobre o projeto
 
-This project is a starting point for a Flutter application.
+Este projeto foi criado exclusivamente para fins de aprendizado.  
+Durante o desenvolvimento, foram praticados conceitos importantes, como:
 
-A few resources to get you started if this is your first Flutter project:
+- Organização de telas e rotas
+- Consumo básico de dados simulados
+- Uso de widgets personalizados
+- Navegação entre páginas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Funcionalidades simuladas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Listagem de restaurantes e pratos
+- Carrinho de compras simulado
+- Tela de resumo de pedidos
+
+## Tecnologias utilizadas
+
+- Flutter
+- Dart
